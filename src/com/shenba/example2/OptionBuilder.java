@@ -49,7 +49,7 @@ public class OptionBuilder {
 	public String getNationalities() {
 		return getOptionsAsHtml("NATIONALITY", opt -> {
 			return "<select name='nationalities'>\n" + opt.entrySet().stream().map(e -> {
-				return "\t<option value='" + e.getValue() + "'> " + e.getKey() + "</option>";})
+				return "\t<option value='" + e.getValue() + "'>" + e.getKey() + "</option>";})
 					.collect(Collectors.joining(" \n")) + "\n</select>";
 		});
 	}
@@ -58,7 +58,7 @@ public class OptionBuilder {
 	public String getSkills() {
 		return getOptionsAsHtml("SKILLS", opt -> {
 			return "<select name='skills' multiple>\n" + opt.entrySet().stream().map(e -> {
-				return "\t<option value='" + e.getValue() + "'> " + e.getKey() + "</option>";})
+				return "\t<option value='" + e.getValue() + "'>" + e.getKey() + "</option>";})
 					.collect(Collectors.joining(" \n")) + "\n</select>";
 		});
 	}
