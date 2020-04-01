@@ -21,9 +21,8 @@ public class FunctionalInterfaceDemo {
 		};
 		
 		//This is also an anonymous method. But the datatypes are ignored here
-		CompareDates byAnonMethodWithoutDataType = (d1, d2, df) -> {
-			return d1.compareTo(d2);
-		};
+		//also {} and return are removed. This is also valid syntax!
+		CompareDates byAnonMethodWithoutDataType = (d1, d2, df) ->  d1.compareTo(d2);
 		
 		System.out.println("Instance method reference: " + fromEmployeeObj.compareDates("2001-01-12", "2001-02-12", "yyyy-MM-dd"));
 		System.out.println("Class method reference: " + byStaticReference.compareDates("2001/01/12 12:30", "2001/01/12 11:30", "uuuu/MM/dd HH:mm"));
